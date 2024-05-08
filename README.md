@@ -3,7 +3,7 @@
 
 
 Установка
-Чтобы запустить приложение необходимо сконировать данную репозиторию. На устройстве зайти в папку Spoty. Установить Python, pip и Django. Запустить команды 'python manage.py migrate' и 'python manage.py runserver' в папке 'spoty/spoty'. Также можно создать аккаунт админа с помощью команды 'python manage.py createsuperuser' чтобы наблюдать за датой внутри сайта
+Чтобы запустить приложение необходимо сконировать данную репозиторию 'https://github.com/nuri-ririri/spoty-spoty.git'. На устройстве зайти в папку Spoty 'cd spoty'. Установить Python, pip и Django. Запустить команды 'python manage.py migrate' и 'python manage.py runserver' в папке 'spoty/spoty'. Также можно создать аккаунт админа с помощью команды 'python manage.py createsuperuser' чтобы наблюдать за датой внутри сайта
 
 
 
