@@ -5,5 +5,5 @@ from register import views as vreg
 urlpatterns = [
     path("", views.home, name="home"),
     path("register/", vreg.register, name="register"),
-    path("todos/", views.todos, name="todos")
+    path("todos/", views.todos, name="todos"),
 ]

@@ -3,96 +3,47 @@
 <!--New Releases-->
 <h1 class="mt-2">New Releases</h1>
 <div class="container d-flex">
-    <div class="row gy-3">
-        <div class="col-md-3">
-            <div class="card">
-                <img src="{% static "albumCover.png" %}" class="card-img-top" alt="Album Cover">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-success">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card">
-                <img src="{% static "albumCover.png" %}" class="card-img-top" alt="Album Cover">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-success">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card">
-                <img src="{% static "albumCover.png" %}" class="card-img-top" alt="Album Cover">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-success">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card">
-                <img src="{% static "albumCover.png" %}" class="card-img-top" alt="Album Cover">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-success">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-    </div>
     
+    <div class="row gy-3">
+        {%for album in albums %}
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="{% static "albumCover.png" %}" class="card-img-top" alt="Album Cover">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ album.title }}</h5>
+                        <p class="card-text">Artist: {{ album.artist }}</p>
+                        <p class="card-text">Genre: {{ album.genre }}</p>
+                        <a href="#" class="btn btn-success">Details</a>
+                    </div>
+                </div>
+            </div>
+        {%endfor%}
+        </div>
+        
     
     
 </div>
 <!--Trends-->
 <h1 class="mt-3">Trends</h1>
 <div class="container d-flex">
+    
     <div class="row gy-3">
-        <div class="col-md-3">
-            <div class="card">
-                <img src="{% static "albumCover.png" %}" class="card-img-top" alt="Album Cover">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-success">Go somewhere</a>
+        {%for album in albums %}
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="{% static "albumCover.png" %}" class="card-img-top" alt="Album Cover">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ album.title }}</h5>
+                        <p class="card-text">Artist: {{ album.artist }}</p>
+                        <p class="card-text">Genre: {{ album.genre }}</p>
+                        <a href="#" class="btn btn-success">Details</a>
+                    </div>
                 </div>
             </div>
+        {%endfor%}
         </div>
-        <div class="col-md-3">
-            <div class="card">
-                <img src="{% static "albumCover.png" %}" class="card-img-top" alt="Album Cover">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-success">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card">
-                <img src="{% static "albumCover.png" %}" class="card-img-top" alt="Album Cover">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-success">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card">
-                <img src="{% static "albumCover.png" %}" class="card-img-top" alt="Album Cover">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-success">Go somewhere</a>
-                </div>
-            </div>
-        </div>
+
+
     </div>
     
     

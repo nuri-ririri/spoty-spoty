@@ -21,15 +21,23 @@
               <button class="navbar-toggler my-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <a class="navbar-brand fw-bold ms-3 my-auto" href="#">Spoty</a>
+              <a class="navbar-brand fw-bold ms-3 my-auto" href="/">Spoty</a>
               <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                   <li class="nav-item">
-                    <a class="nav-link active my-auto" aria-current="page" href="#">New Releases</a>
+                    <a class="nav-link active my-auto" aria-current="page" href="/">New Releases</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active my-auto" href="#">Trends</a>
+                    <a class="nav-link active my-auto" href="/">Trends</a>
                   </li>
+                  {% if user.is_authenticated%}
+                  <li class="nav-item">
+                    <a class="nav-link active my-auto" href="#">My reviews</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active my-auto" href="#">My Ratings</a>
+                  </li>
+                  {% endif %}
                 </ul>
                 
                 <form class="d-flex " role="search">
@@ -37,8 +45,8 @@
                     <button class="btn btn-outline-dark me-4 rounded-3 my-auto" type="submit">Search</button>
                 </form>
                 <div class="d-grid me-3 gap-2 d-md-block ">
-                    <button class="btn btn-dark rounded-3" type="button">Sign Up</button>
-                    <button class="btn btn-dark rounded-3 mx-auto my-auto" type="button">Log In</button>
+                    <a class="btn btn-dark rounded-3" type="button" href="/register">Sign Up</a>
+                    <a class="btn btn-dark rounded-3 mx-auto my-auto" type="button" href="/login">Log In</a>
                   </div>
                 
                 
